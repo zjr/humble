@@ -15,7 +15,7 @@ export default function Page({ page }) {
 	// console.log(page);
 
 	return (
-		<Layout title={page.title}>
+		<Layout title={page.title} className="page">
 			<div className="hero">
 				<div className="menu">
 					<div className="hamburger">
@@ -28,10 +28,14 @@ export default function Page({ page }) {
 						<h5>humble hairdressers</h5>
 					</div>
 				</div>
-				<h1>{page.title}</h1>
-				<div className="home-ctas">
-					<HButton text="Donate" />
-					<HButton text="Volunteer" />
+				<div className="text-content">
+					<h1>{page.title}</h1>
+					<p className="subtitle">
+						We give haircuts, yes. But a haircut isn’t really just a haircut. We
+						raise self-esteem by helping people look how they want to look. A
+						haircut is an opportunity to make a choice. We give people who might
+						not have many choices a chance to say what they want.
+					</p>
 				</div>
 			</div>
 			<div dangerouslySetInnerHTML={{ __html: page.html }} />

@@ -65,16 +65,44 @@ h5 {
 }
 
 .hero {
-	background-color: gray;
 	height: 100vh;
 	width: 100vw;
-	background-image: url('/images/tunnelFreeHaircutsDark.jpg');
-	background-size: cover;
-	h1 {
-		color: white;
-		margin-top: 20vh;
-		padding: 0 150px;
+
+	.home & {
+		background-size: cover;
+		background-image: url('/images/tunnelFreeHaircutsDark.jpg');
+		background-color: gray;
 	}
+
+	.page & {
+		background-image: url('/images/HumbleHairdressersLogoWhite.png');
+		background-repeat: no-repeat;
+		background-position: -25vw 100%;
+		background-size: contain;
+	}
+
+	.text-content {
+		display: flex;
+		width: 75vw;
+		margin: 20vh auto 0;
+		justify-content: space-between;
+	}
+
+	h1 {
+		align-self: center;
+
+		.home & {
+			padding: 0 150px;
+			margin-top: 20vh;
+			color: white;
+		}
+	}
+
+	.subtitle {
+		font-size: 30px;
+		max-width: 45vw;
+	}
+
 	.home-ctas {
 		display: flex;
 		flex-direction: row;
