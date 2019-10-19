@@ -1,0 +1,29 @@
+.sub-hero {
+	display: flex;
+	justify-content: space-between;
+
+	.feature-image {
+		width: 58vw;
+		position: relative;
+		top: -10vh;
+	}
+
+	.feature-block {
+		padding: 100px;
+		width: 42vw;
+
+		top: 10vh;
+		position: relative;
+
+		box-sizing: border-box;
+		background: white;
+
+		.title {
+			font-size: 60px;
+			font-family: 'Bitter', serif;
+		}
+		.text {
+			font-size: 30px;
+		}
+	}
+}
