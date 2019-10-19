@@ -6,5 +6,17 @@
   "repository": "git@github.com:zjr/humble.git",
   "author": "Zachary J. Rollyson <me@zjr.io>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick staged"
+    }
+  },
+  "devDependencies": {
+    "husky": "^3.0.9"
+  },
+  "dependencies": {
+    "prettier": "^1.18.2",
+    "pretty-quick": "^2.0.0"
+  }
 }
