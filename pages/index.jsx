@@ -4,6 +4,8 @@ import ghost from '../config/ghost';
 
 import '../styles/main.scss';
 
+// import logo from '/images/HumbleHairdressersLogoLight.png'
+
 Home.getInitialProps = async () => {
 	return {
 		posts: await ghost.posts.browse({ limit: 'all' }).catch(console.error)
@@ -13,14 +15,18 @@ Home.getInitialProps = async () => {
 export default function Home({ posts }) {
 	// noinspection HtmlUnknownTarget
 	return (
-		<div>
+		<div className="home">
+			<div className="hero">
+				<div className="menu">
+					<img src='/images/HumbleHairdressersLogoLight.png' alt="h arrow" />
+				</div>
 			<h1>We provide quality, no-charge services for those in need.</h1>
 			<Link href="/[slug]" as="/about">
 				<a>About</a>
 			</Link>
 			<button className="humble-btn">Donate</button>
 			<button className="humble-btn">Volunteer</button>
-
+			</div>
 			<div className="white-block">
 				<h5>It's not just a haircut.</h5>
 				<h2>We change perceptions, one cut at a time.</h2>
