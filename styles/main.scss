@@ -28,21 +28,40 @@ h5 {
 	background-color: #0c100a;
 	height: 150px;
 	width: 450px;
+	.left {
+		width: 150px;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	}
 	.hamburger {
 		width: 50px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-content: center;
+		cursor: pointer;
 		> div {
 			border-bottom: 2px solid white;
 			margin-bottom: 5px;
+			transition: all 250ms ease-in-out;
 			&:first-child,
 			&:last-child {
 				width: 25px;
 			}
 			&:last-child {
-				margin-left: auto;
+				margin-left: calc(100% - 25px);
+				transition-delay: 100ms;
+			}
+		}
+		&:hover {
+			> div {
+				&:last-child {
+					margin-left: 0;
+				}
+				&:first-child {
+					margin-left: calc(100% - 25px);
+				}
 			}
 		}
 	}
@@ -145,5 +164,25 @@ h5 {
 	}
 	.donations-block {
 		transform: translateY(-33%);
+	}
+}
+
+.nav {
+	position: absolute;
+	height: 100vh;
+	top: 0;
+	bottom: 0;
+	background-color: #0c100a;
+	transform: translateX(-100%);
+	transition: all 350ms ease-in-out;
+	width: 300px;
+	&.open {
+		transform: translateX(0);
+	}
+	li {
+		color: white;
+		list-style: none;
+		font-family: 'Bitter', serif;
+		margin: 20px 0;
 	}
 }
