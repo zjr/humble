@@ -11,15 +11,24 @@ Home.getInitialProps = async () => {
 export default function Home({ posts }) {
 	return (
 		<div>
-			<h1>Welcome to Next.js!</h1>
+			<h1>We provide quality, no-charge services
+				for those in need.</h1>
 			<Link href="/[slug]" as="/about">
 				<a>About</a>
 			</Link>
+			<button className="humble-btn">Donate</button>
+			<button className="humble-btn">Volunteer</button>
+
+			<div className="white-block">
+				<h5>It's not just a haircut.</h5>
+				<h2>We change perceptions, one cut at a time.</h2>
+			</div>
 			<ul>
 				{posts.map(post => (
 					<li key={post.slug}>{post.title}</li>
 				))}
 			</ul>
+
 		</div>
 	);
 }
