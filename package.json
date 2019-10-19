@@ -1,0 +1,10 @@
+{
+  "name": "humble",
+  "version": "0.1.0",
+  "description": "Humble Hairdressers Website",
+  "main": "index.js",
+  "repository": "git@github.com:zjr/humble.git",
+  "author": "Zachary J. Rollyson <me@zjr.io>",
+  "license": "MIT",
+  "private": false
+}
