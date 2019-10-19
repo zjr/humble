@@ -28,6 +28,12 @@ h5 {
 	background-color: #0c100a;
 	height: 150px;
 	width: 450px;
+	.left {
+		width: 150px;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	}
 	.hamburger {
 		width: 50px;
 		display: flex;

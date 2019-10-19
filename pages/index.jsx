@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import Link from 'next/link';
+import classNames from 'classnames';
 
 import ghost from '../config/ghost';
 import Layout from '../components/layout';
@@ -20,16 +21,19 @@ export default function Home({ posts, meta }) {
 	// More info on posts & paging:
 	// console.log({ posts, meta });
 
+
 	// noinspection HtmlUnknownTarget
 	return (
 		<Layout>
-			<div className="home">
+			<div className="home" >
 				<div className="hero">
 					<div className="menu">
+						<div className="left">
 						<div className="hamburger">
 							<div />
 							<div />
 							<div />
+						</div>
 						</div>
 						<div className="right">
 							<img
