@@ -1,5 +1,3 @@
-
-
 .h-button {
 	cursor: pointer;
 	border: 2px solid white;
@@ -26,7 +24,7 @@
 	overflow: hidden;
 }
 .underline:before {
-	content: "";
+	content: '';
 	position: absolute;
 	z-index: -1;
 	left: 51%;
@@ -44,7 +42,9 @@
 .underline.dark:before {
 	background: #0c100a;
 }
-.underline:hover:before, .underline:focus:before, .underline:active:before {
+.underline:hover:before,
+.underline:focus:before,
+.underline:active:before {
 	left: 0;
 	right: 0;
 }
