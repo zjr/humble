@@ -1,8 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+
 import ghost from '../config/ghost';
 
-import '../styles/main.scss';
+import Layout from '../components/layout';
 
 // import logo from '/images/HumbleHairdressersLogoLight.png'
 
@@ -15,6 +16,7 @@ Home.getInitialProps = async () => {
 export default function Home({ posts }) {
 	// noinspection HtmlUnknownTarget
 	return (
+		<Layout>
 		<div className="home">
 			<div className="hero">
 				<div className="menu">
@@ -37,5 +39,6 @@ export default function Home({ posts }) {
 				))}
 			</ul>
 		</div>
+		</Layout>
 	);
 }

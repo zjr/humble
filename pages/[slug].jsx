@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ghost from '../config/ghost';
 
-import '../styles/main.scss';
+import Layout from '../components/layout';
 
 Page.getInitialProps = async req => {
 	return {
@@ -15,12 +15,12 @@ export default function Page({ page }) {
 	// console.log(page);
 
 	return (
-		<div>
+		<Layout title={page.title}>
 			<h1>{page.title}</h1>
 			<Link href="/">
 				<a>Home</a>
 			</Link>
 			<div dangerouslySetInnerHTML={{ __html: page.html }} />
-		</div>
+		</Layout>
 	);
 }
