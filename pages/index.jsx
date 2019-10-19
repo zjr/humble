@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import ghost from '../config/ghost';
 
+import '../styles/main.scss';
+
 Home.getInitialProps = async () => {
 	return {
 		posts: await ghost.posts.browse({ limit: 'all' }).catch(console.error)
@@ -9,6 +11,7 @@ Home.getInitialProps = async () => {
 };
 
 export default function Home({ posts }) {
+	// noinspection HtmlUnknownTarget
 	return (
 		<div>
 			<h1>Welcome to Next.js!</h1>
