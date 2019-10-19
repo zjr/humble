@@ -26,11 +26,11 @@ export default function Home({ posts, meta }) {
 
 	const navClasses = classNames('nav', {
 		open: navOpen
-	})
+	});
 
 	return (
 		<Layout>
-		<nav className={navClasses} onClick={() => setNavOpen(false)}>
+			<nav className={navClasses} onClick={() => setNavOpen(false)}>
 				<ul>
 					<li>About</li>
 					<li>Donate</li>
