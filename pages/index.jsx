@@ -1,23 +1,10 @@
 import React from 'react';
-import GhostContentAPI from '@tryghost/content-api';
-
-// Create API instance with site credentials
-const api = new GhostContentAPI({
-	url: 'https://humbleghost.herokuapp.com',
-	key: '543271aba1b92a2286308226c7',
-	version: 'v2'
-});
+import ghost from '../config/ghost';
 
 Home.getInitialProps = async () => {
-	const posts = await api.posts
-		.browse({
-			limit: 'all'
-		})
-		.catch(err => {
-			console.error(err);
-		});
-
-	return { posts };
+	return {
+		posts: await ghost.posts.browse({ limit: 'all' }).catch(console.error)
+	};
 };
 
 export default function Home({ posts }) {
