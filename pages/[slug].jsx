@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import ghost from '../config/ghost';
 
+import '../styles/main.scss';
+
 Page.getInitialProps = async req => {
 	return {
 		page: await ghost.pages.read({ slug: req.query.slug })
@@ -10,7 +12,7 @@ Page.getInitialProps = async req => {
 
 export default function Page({ page }) {
 	// See here for other page information
-	console.log(page);
+	// console.log(page);
 
 	return (
 		<div>
