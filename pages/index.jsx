@@ -40,9 +40,6 @@ export default function Home({ posts, meta }) {
 						</div>
 					</div>
 					<h1>We provide quality, no-charge services for those in need.</h1>
-					<Link href="/[slug]" as="/about">
-						<a>About</a>
-					</Link>
 					<div className="home-ctas">
 						<HButton text="Donate" />
 						<HButton text="Volunteer" />
@@ -58,6 +55,8 @@ export default function Home({ posts, meta }) {
 						head="It's not just a haircut."
 						main="We change perceptions, one cut at a time."
 						button="About us"
+						link="/slug"
+						as="/about"
 					/>
 				</div>
 				<img
@@ -77,12 +76,6 @@ export default function Home({ posts, meta }) {
 					/>
 					<DonationsBlock />
 				</div>
-
-				{/*<ul>*/}
-				{/*	{posts.map(post => (*/}
-				{/*		<li key={post.slug}>{post.title}</li>*/}
-				{/*	))}*/}
-				{/*</ul>*/}
 			</div>
 			<Footer />
 		</Layout>
