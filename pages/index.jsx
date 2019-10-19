@@ -27,6 +27,10 @@ export default function Home({ posts, meta }) {
 			<Link href="/news">
 				<a>News</a>
 			</Link>
+			<br />
+			<Link href="/donate">
+				<a>Donate</a>
+			</Link>
 			<ul>
 				{posts.map(post => (
 					<li key={post.id}>{post.title}</li>
