@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 
 import ghost from '../config/ghost';
-
 import Layout from '../components/layout';
 import HButton from '../components/HButton/Hbutton';
 import WhiteBlock from '../components/WhiteBlock/WhiteBlock';
@@ -10,12 +9,17 @@ import DonationsBlock from '../components/DonationsBlock/DonationsBlock';
 import Footer from '../components/Footer/Footer';
 
 Home.getInitialProps = async () => {
-	return {
-		posts: await ghost.posts.browse({ limit: 'all' }).catch(console.error)
-	};
+	const data = await ghost.posts
+		.browse({ fields: 'id, title' })
+		.catch(console.error);
+
+	return { posts: data, meta: data.meta };
 };
 
-export default function Home({ posts }) {
+export default function Home({ posts, meta }) {
+	// More info on posts & paging:
+	// console.log({ posts, meta });
+
 	// noinspection HtmlUnknownTarget
 	return (
 		<Layout>

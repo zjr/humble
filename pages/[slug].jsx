@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import ghost from '../config/ghost';
 
+import ghost from '../config/ghost';
 import Layout from '../components/layout';
 
 Page.getInitialProps = async req => {
