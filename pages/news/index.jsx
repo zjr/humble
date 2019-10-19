@@ -5,14 +5,16 @@ import ghost from '../../config/ghost';
 import Layout from '../../components/layout';
 
 News.getInitialProps = async () => {
-	return {
-		posts: await ghost.posts.browse({ filter: 'tag:news' })
-	};
+	const data = await ghost.posts
+		.browse({ filter: 'tag:news', fields: 'id, title' })
+		.catch(console.error);
+
+	return { posts: data, meta: data.meta };
 };
 
-export default function News({ posts }) {
-	// See here for other page information
-	// console.log(page);
+export default function News({ posts, meta }) {
+	// See here for other post & paging (meta) information
+	// console.log({ posts, meta });
 
 	// noinspection HtmlUnknownTarget
 	return (

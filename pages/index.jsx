@@ -5,12 +5,17 @@ import ghost from '../config/ghost';
 import Layout from '../components/layout';
 
 Home.getInitialProps = async () => {
-	return {
-		posts: await ghost.posts.browse({ limit: 'all' }).catch(console.error)
-	};
+	const data = await ghost.posts
+		.browse({ fields: 'id, title' })
+		.catch(console.error);
+
+	return { posts: data, meta: data.meta };
 };
 
-export default function Home({ posts }) {
+export default function Home({ posts, meta }) {
+	// More info on posts & paging:
+	// console.log({ posts, meta });
+
 	// noinspection HtmlUnknownTarget
 	return (
 		<Layout>
@@ -24,7 +29,7 @@ export default function Home({ posts }) {
 			</Link>
 			<ul>
 				{posts.map(post => (
-					<li key={post.slug}>{post.title}</li>
+					<li key={post.id}>{post.title}</li>
 				))}
 			</ul>
 		</Layout>
