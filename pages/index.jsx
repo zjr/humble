@@ -1,8 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+
 import ghost from '../config/ghost';
 
-import '../styles/main.scss';
+import Layout from '../components/layout';
 
 Home.getInitialProps = async () => {
 	return {
@@ -13,7 +14,7 @@ Home.getInitialProps = async () => {
 export default function Home({ posts }) {
 	// noinspection HtmlUnknownTarget
 	return (
-		<div>
+		<Layout>
 			<h1>Welcome to Next.js!</h1>
 			<Link href="/[slug]" as="/about">
 				<a>About</a>
@@ -23,6 +24,6 @@ export default function Home({ posts }) {
 					<li key={post.slug}>{post.title}</li>
 				))}
 			</ul>
-		</div>
+		</Layout>
 	);
 }
