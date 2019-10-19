@@ -11,8 +11,7 @@ Home.getInitialProps = async () => {
 export default function Home({ posts }) {
 	return (
 		<div>
-			<h1>We provide quality, no-charge services
-				for those in need.</h1>
+			<h1>We provide quality, no-charge services for those in need.</h1>
 			<Link href="/[slug]" as="/about">
 				<a>About</a>
 			</Link>
@@ -28,7 +27,6 @@ export default function Home({ posts }) {
 					<li key={post.slug}>{post.title}</li>
 				))}
 			</ul>
-
 		</div>
 	);
 }
