@@ -82,88 +82,60 @@ h5 {
 		margin-bottom: 10px;
 	}
 }
-
-.hero {
-	width: 100vw;
-	min-height: 100vh;
-
-	.home & {
-		background-size: cover;
-		background-image: url('/images/tunnelFreeHaircutsDark.jpg');
+.home {
+	.hero {
 		background-color: gray;
-	}
-
-	.page & {
-		background-image: url('/images/HumbleHairdressersLogoWhite.png');
-		background-repeat: no-repeat;
-		background-position: -25vw 100%;
-		background-size: contain;
-	}
-
-	.text-content {
-		display: flex;
-		width: 75vw;
-		margin: 20vh auto 20vh;
-		justify-content: space-between;
-	}
-
-	h1 {
-		align-self: center;
-
-		.home & {
-			padding: 0 150px;
-			margin-top: 20vh;
+		height: 100vh;
+		width: 100vw;
+		background-image: url('/images/tunnelFreeHaircutsDark.jpg');
+		background-size: cover;
+		h1 {
 			color: white;
+			margin-top: 20vh;
+			padding: 0 150px;
+		}
+		.home-ctas {
+			display: flex;
+			flex-direction: row;
+			padding-right: 150px;
+			width: 100%;
+			justify-content: flex-end;
+			box-sizing: border-box;
+			margin-top: 15vh;
 		}
 	}
 
-	.excerpt {
-		font-size: 30px;
-		max-width: 45vw;
-	}
-
-	.home-ctas {
+	.second-block {
 		display: flex;
-		flex-direction: row;
-		padding-right: 150px;
-		width: 100%;
-		justify-content: flex-end;
-		box-sizing: border-box;
-		margin-top: 15vh;
+		flex-direction: column;
+		padding: 150px;
+		img {
+			margin: auto;
+		}
+		.white-block {
+			transform: translateY(-33%);
+		}
+		margin-bottom: -33%;
 	}
-}
-
-.second-block {
-	display: flex;
-	flex-direction: column;
-	padding: 150px;
-	img {
-		margin: auto;
+	.large-bg-logo {
+		z-index: -1;
+		width: 100vw;
 	}
-	.white-block {
-		transform: translateY(-33%);
-	}
-	margin-bottom: -33%;
-}
 
-.large-bg-logo {
-	z-index: -1;
-	width: 100vw;
-}
-
-.banner-text {
-	width: 66%;
-	margin: 150px auto;
-}
-
-.bottom-block {
-	display: flex;
-	flex-direction: column;
-	img {
+	.banner-text {
 		width: 66%;
+		margin: 150px auto;
 	}
-	.donations-block {
-		transform: translateY(-33%);
+
+	.bottom-block {
+		display: flex;
+		flex-direction: column;
+		img {
+			width: 66%;
+		}
+		.donations-block {
+			transform: translateY(-33%);
+		}
 	}
 }
 
