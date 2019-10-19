@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import classNames from 'classnames';
 
 import ghost from '../config/ghost';
 import Layout from '../components/layout';
@@ -21,15 +22,32 @@ export default function Home({ posts, meta }) {
 	// console.log({ posts, meta });
 
 	// noinspection HtmlUnknownTarget
+	const [navOpen, setNavOpen] = useState(false);
+
+	const navClasses = classNames('nav', {
+		open: navOpen
+	});
+
 	return (
 		<Layout>
+			<nav className={navClasses} onClick={() => setNavOpen(false)}>
+				<ul>
+					<li>About</li>
+					<li>Donate</li>
+					<li>Volunteer</li>
+					<li>Events</li>
+				</ul>
+			</nav>
+
 			<div className="home">
 				<div className="hero">
 					<div className="menu">
-						<div className="hamburger">
-							<div />
-							<div />
-							<div />
+						<div className="left">
+							<div className="hamburger" onClick={() => setNavOpen(!navOpen)}>
+								<div />
+								<div />
+								<div />
+							</div>
 						</div>
 						<div className="right">
 							<img
