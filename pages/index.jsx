@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 
 import ghost from '../config/ghost';
-
 import Layout from '../components/layout';
 
 Home.getInitialProps = async () => {
@@ -18,6 +17,10 @@ export default function Home({ posts }) {
 			<h1>Welcome to Next.js!</h1>
 			<Link href="/[slug]" as="/about">
 				<a>About</a>
+			</Link>
+			<br />
+			<Link href="/news">
+				<a>News</a>
 			</Link>
 			<ul>
 				{posts.map(post => (
