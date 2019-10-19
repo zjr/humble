@@ -1,8 +1,9 @@
-html, body {
+html,
+body {
 	font-family: sans-serif;
 	font-size: 16px;
 	background-color: #f4f4f4;
-	color:  #0c100a;
+	color: #0c100a;
 	margin: 0;
 	padding: 0;
 }
@@ -33,10 +34,11 @@ h5 {
 		flex-direction: column;
 		justify-content: center;
 		align-content: center;
-		>div {
+		> div {
 			border-bottom: 2px solid white;
 			margin-bottom: 5px;
-			&:first-child, &:last-child {
+			&:first-child,
+			&:last-child {
 				width: 25px;
 			}
 			&:last-child {
@@ -55,7 +57,6 @@ h5 {
 		h5 {
 			margin: 0;
 		}
-
 	}
 	img {
 		width: 80px;
@@ -105,7 +106,7 @@ h5 {
 	.banner-text {
 		width: 66%;
 		margin: 150px auto;
-}
+	}
 
 	.bottom-block {
 		display: flex;
