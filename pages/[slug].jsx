@@ -2,7 +2,8 @@ import React from 'react';
 
 import ghost from '../config/ghost';
 import Layout from '../components/layout';
-import HButton from '../components/HButton/Hbutton';
+
+import '../styles/page.scss';
 
 Page.getInitialProps = async req => {
 	return {
@@ -12,7 +13,7 @@ Page.getInitialProps = async req => {
 
 export default function Page({ page }) {
 	// See here for other page information
-	// console.log(page);
+	console.log(page);
 
 	return (
 		<Layout title={page.title} className="page">
@@ -30,13 +31,19 @@ export default function Page({ page }) {
 				</div>
 				<div className="text-content">
 					<h1>{page.title}</h1>
-					<p className="subtitle">
-						We give haircuts, yes. But a haircut isn’t really just a haircut. We
-						raise self-esteem by helping people look how they want to look. A
-						haircut is an opportunity to make a choice. We give people who might
-						not have many choices a chance to say what they want.
+					<p className="excerpt">{page.custom_excerpt || page.excerpt}</p>
+				</div>
+			</div>
+			<div className="sub-hero">
+				<div className="feature-block">
+					<h3 className="title">The people are amazing.</h3>
+					<p className="text">
+						Don’t get us wrong, it’s hard work. But the gratification is worth
+						it. Nothing is cooler than showing up and delivering one when no one
+						is expecting it.
 					</p>
 				</div>
+				<img className="feature-image" src={page.feature_image} alt="" />
 			</div>
 			<div dangerouslySetInnerHTML={{ __html: page.html }} />
 		</Layout>
