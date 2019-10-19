@@ -1,6 +1,8 @@
 import React from 'react';
 
-
-export default function HButton ({text}) {
-  <button className="h-button">{text}</button>
+import './Hbutton.scss'
+export default function HButton({ text, onClick, dark }) {
+	return(
+		<button className={dark ? "dark h-button" : 'h-button'}  onClick={onClick}>{text}</button>
+	)
 }
