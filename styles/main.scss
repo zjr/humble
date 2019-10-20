@@ -147,14 +147,28 @@ h5 {
 	background-color: #0c100a;
 	transform: translateX(-100%);
 	transition: all 350ms ease-in-out;
-	width: 300px;
+	min-width: 450px;
+	width: 33vw;
+	padding: 50px;
+	box-sizing: border-box;
 	&.open {
 		transform: translateX(0);
+	}
+	ul {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: space-around;
 	}
 	li {
 		color: white;
 		list-style: none;
 		font-family: 'Bitter', serif;
 		margin: 20px 0;
+		transition: all 250ms ease-in-out;
+		font-size: 60px;
+		&:hover {
+			color: #cfae7c;
+		}
 	}
 }
