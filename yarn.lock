@@ -1040,11 +1040,6 @@
   dependencies:
     lodash "4.17.15"
 
-"@commitlint/execute-rule@^8.3.2":
-  version "8.3.2"
-  resolved "https://registry.yarnpkg.com/@commitlint/execute-rule/-/execute-rule-8.3.2.tgz#2bc643d9bf409d9d2f11c40691257d606aa3e2ab"
-  integrity sha512-34xugZLvyXl8blVNweXNpYtho5sfbMRCGjx/z6PeoZJWuC7lv/U40kkqnTcGExNGTCZpcPP/qCle97wDIM88UQ==
-
 "@commitlint/execute-rule@^8.3.4":
   version "8.3.4"
   resolved "https://registry.yarnpkg.com/@commitlint/execute-rule/-/execute-rule-8.3.4.tgz#1b63f0713b197889d90b76f9eea1abc010d256b1"
@@ -1076,19 +1071,6 @@
     babel-runtime "^6.23.0"
     lodash "4.17.15"
 
-"@commitlint/load@^8.3.3":
-  version "8.3.3"
-  resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-8.3.3.tgz#8ddbfd7d199e3a45f897e0109131fb0ba3c13ba4"
-  integrity sha512-YE/9ZZt0T3ZDMUVyIOBVDfRXv9yH2JFKe+toYDQasG4+THwWmZ6fb/K6OmF/QA240/QXG+OgC0lgrWLjEw1yGg==
-  dependencies:
-    "@commitlint/execute-rule" "^8.3.2"
-    "@commitlint/resolve-extends" "^8.3.2"
-    babel-runtime "^6.23.0"
-    chalk "2.4.2"
-    cosmiconfig "^5.2.0"
-    lodash "4.17.15"
-    resolve-from "^5.0.0"
-
 "@commitlint/load@^8.3.4":
   version "8.3.4"
   resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-8.3.4.tgz#6a0832362451b959f6aa47da8e44c2e05572b114"
@@ -1116,21 +1098,21 @@
     conventional-commits-parser "^3.0.0"
     lodash "^4.17.11"
 
-"@commitlint/prompt-cli@^8.3.3":
-  version "8.3.3"
-  resolved "https://registry.yarnpkg.com/@commitlint/prompt-cli/-/prompt-cli-8.3.3.tgz#44815c2000bbcb5cb89619ac2fcbcd584d9188c3"
-  integrity sha512-xGORaY+WC8rB92N+aLAemnVC9hPlVKLn3mypGC8iXOxYf2oQc7y8eqnycSzQbhV/kC1SxyLhP1sj3/3r3oM3Wg==
+"@commitlint/prompt-cli@^8.3.4":
+  version "8.3.4"
+  resolved "https://registry.yarnpkg.com/@commitlint/prompt-cli/-/prompt-cli-8.3.4.tgz#35428f5943d43c3242c417f5d29b3c7da8bff393"
+  integrity sha512-1svP3oZ3BDqXEax1vqz+wlC714T40gpUmDxjWymhDUsiTVDKuIjbz8riMPO91qnE6hX3sx63AMhKEilKBYTbYA==
   dependencies:
-    "@commitlint/prompt" "^8.3.3"
+    "@commitlint/prompt" "^8.3.4"
     execa "0.11.0"
     string-to-stream "3.0.1"
 
-"@commitlint/prompt@^8.3.3":
-  version "8.3.3"
-  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-8.3.3.tgz#bbe5c4aa32e30e08c2452f65d1d5928321b3481d"
-  integrity sha512-TfJ0pjKcJwXHR0R2oYpXOdSuRunTKFTpO7NTRWEoc4NbYa3wiSM+ctw/oZswbtYxfPOWG2zvtvXXoMDDxB4Dqw==
+"@commitlint/prompt@^8.3.4":
+  version "8.3.4"
+  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-8.3.4.tgz#c513df4a483dc67c4714c8d311dce0f5724168a8"
+  integrity sha512-x3nd2A2YUcDk6hZ3CsW+uHLoi3Fd0ZByMougsUD/yG5PVe1RrDsI6thzEohe1wEEwlFL4U0VoPg0U26cGUKeJA==
   dependencies:
-    "@commitlint/load" "^8.3.3"
+    "@commitlint/load" "^8.3.4"
     babel-runtime "^6.23.0"
     chalk "^2.0.0"
     lodash "4.17.15"
@@ -1146,17 +1128,6 @@
     "@marionebl/sander" "^0.6.0"
     babel-runtime "^6.23.0"
     git-raw-commits "^2.0.0"
-
-"@commitlint/resolve-extends@^8.3.2":
-  version "8.3.2"
-  resolved "https://registry.yarnpkg.com/@commitlint/resolve-extends/-/resolve-extends-8.3.2.tgz#bf3f6117c243bda714fcf206e82448132001b818"
-  integrity sha512-8ipCJBLJ6SmPzFvubACpRhmywsOiAf3j//ruBD9r6UBO4UXy9eLyOcVSCPLac9fuZuwijYGdGG/bZRPQpKqjGA==
-  dependencies:
-    "@types/node" "^12.0.2"
-    import-fresh "^3.0.0"
-    lodash "4.17.15"
-    resolve-from "^5.0.0"
-    resolve-global "^1.0.0"
 
 "@commitlint/resolve-extends@^8.3.4":
   version "8.3.4"
