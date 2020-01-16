@@ -23,7 +23,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^8.3.5",
 		"@commitlint/prompt-cli": "^8.3.5",
-		"commitlint": "^8.3.4",
+		"commitlint": "^8.3.5",
 		"husky": "^4.0.10",
 		"prettier": "^1.19.1",
 		"pretty-quick": "^2.0.1",
