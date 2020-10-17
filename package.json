@@ -30,7 +30,7 @@
 		"standard-version": "^8.0.0"
 	},
 	"dependencies": {
-		"@tryghost/content-api": "^1.4.1",
+		"@tryghost/content-api": "^1.4.7",
 		"@zeit/next-sass": "^1.0.1",
 		"classnames": "^2.2.6",
 		"next": "^9.4.4",
